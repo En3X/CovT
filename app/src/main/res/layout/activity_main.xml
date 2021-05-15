@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_bg"
+    tools:context=".MainActivity">
+
+
+    <include
+        layout="@layout/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="17dp"
+        android:fillViewport="true"
+        android:paddingBottom="25sp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/countryStatsIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:fontFamily="@font/baloo_regular"
+                android:text="@string/worldStatIndicator"
+                android:textColor="@color/grayish_text"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/worldTotalConfirmed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/countryStatsIndicator"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/holder_rectangle" />
+
+            <TextView
+                android:id="@+id/worldConfirmed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="58dp"
+                android:fontFamily="@font/baloo_regular"
+                android:text="@string/confirmed"
+                android:textColor="@color/grayish_text"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@+id/worldTotalConfirmed"
+                app:layout_constraintEnd_toEndOf="@+id/worldTotalConfirmed"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/worldTotalConfirmed"
+                app:layout_constraintTop_toTopOf="@+id/worldTotalConfirmed"
+                app:layout_constraintVertical_bias="0.538" />
+
+            <TextView
+                android:id="@+id/worldConfirmedNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_marginStart="59dp"
+                android:layout_marginEnd="64dp"
+                android:layout_marginBottom="31dp"
+                android:fontFamily="@font/baloo_regular"
+                android:text="@string/loadingDots"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="@+id/worldTotalConfirmed"
+                app:layout_constraintEnd_toEndOf="@+id/worldTotalConfirmed"
+                app:layout_constraintHorizontal_bias="0.476"
+                app:layout_constraintStart_toStartOf="@+id/worldTotalConfirmed"
+                app:layout_constraintTop_toBottomOf="@+id/worldConfirmed"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/worldTotalDeath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.051"
+                app:layout_constraintStart_toEndOf="@+id/worldTotalConfirmed"
+                app:layout_constraintTop_toBottomOf="@+id/countryStatsIndicator"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/holder_rectangle" />
+
+            <TextView
+                android:id="@+id/worldDeath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/baloo_regular"
+                android:text="@string/death"
+                android:textColor="@color/grayish_text"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@+id/worldTotalDeath"
+                app:layout_constraintEnd_toEndOf="@+id/worldTotalDeath"
+                app:layout_constraintHorizontal_bias="0.246"
+                app:layout_constraintStart_toStartOf="@+id/worldTotalDeath"
+                app:layout_constraintTop_toTopOf="@+id/worldTotalDeath"
+                app:layout_constraintVertical_bias="0.272" />
+
+            <TextView
+                android:id="@+id/worldDeathNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo_regular"
+                android:text="@string/loadingDots"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="@+id/worldTotalDeath"
+                app:layout_constraintEnd_toEndOf="@+id/worldTotalDeath"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="@+id/worldTotalDeath"
+                app:layout_constraintTop_toBottomOf="@+id/worldDeath"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!-- Row 2 -->
+            <ImageView
+                android:id="@+id/worldTotalConfirmed3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="17dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.004"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/worldTotalConfirmed"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/holder_rectangle" />
+
+            <TextView
+                android:id="@+id/worldRecoveredNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo_regular"
+                android:text="@string/loadingDots"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="@+id/worldTotalConfirmed3"
+                app:layout_constraintEnd_toEndOf="@+id/worldTotalConfirmed3"
+                app:layout_constraintHorizontal_bias="0.471"
+                app:layout_constraintStart_toStartOf="@+id/worldTotalConfirmed3"
+                app:layout_constraintTop_toBottomOf="@+id/worldRecovered"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/worldRecovered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/baloo_regular"
+                android:text="@string/recovered"
+                android:textColor="@color/grayish_text"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@+id/worldTotalConfirmed3"
+                app:layout_constraintEnd_toEndOf="@+id/worldTotalConfirmed3"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/worldTotalConfirmed3"
+                app:layout_constraintTop_toTopOf="@+id/worldTotalConfirmed3"
+                app:layout_constraintVertical_bias="0.154" />
+
+            <ImageView
+                android:id="@+id/worldTotalDeath2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="17dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/worldTotalConfirmed3"
+                app:layout_constraintTop_toBottomOf="@+id/worldTotalDeath"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/holder_rectangle" />
+
+<TextView
+                android:id="@+id/worldActive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="47dp"
+                android:fontFamily="@font/baloo_regular"
+                android:text="@string/active"
+                android:textColor="@color/grayish_text"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@+id/worldTotalDeath2"
+                app:layout_constraintEnd_toEndOf="@+id/worldTotalDeath2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/worldTotalDeath2"
+                app:layout_constraintTop_toTopOf="@+id/worldTotalDeath2"
+                app:layout_constraintVertical_bias="0.172" />
+
+            <TextView
+                android:id="@+id/worldActiveNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="43dp"
+                android:fontFamily="@font/baloo_regular"
+                android:text="@string/loadingDots"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="@+id/worldTotalDeath2"
+                app:layout_constraintEnd_toEndOf="@+id/worldTotalDeath2"
+                app:layout_constraintHorizontal_bias="0.511"
+                app:layout_constraintStart_toStartOf="@+id/worldTotalDeath2"
+                app:layout_constraintTop_toBottomOf="@+id/worldActive"
+                app:layout_constraintVertical_bias="0.09" />
+            <!-- Activities-->
+
+            <TextView
+                android:id="@+id/activitiesMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/baloo_regular"
+                android:text="@string/activities"
+                android:textColor="@color/grayish_text"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/worldTotalConfirmed3"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/viewByContryHolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activitiesMain"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/holder_rectangle" />
+
+
+            <ImageView
+                android:id="@+id/compareCountryHolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/viewByContryHolder"
+                app:layout_constraintTop_toTopOf="@+id/viewByContryHolder"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/holder_rectangle" />
+
+            <TextView
+                android:id="@+id/contryCompare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo_regular"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="Compare Country"
+                android:textColor="@color/grayish_text"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/compareCountryHolder"
+                app:layout_constraintEnd_toEndOf="@+id/compareCountryHolder"
+                app:layout_constraintStart_toEndOf="@+id/viewByContryHolder"
+                app:layout_constraintStart_toStartOf="@+id/compareCountryHolder"
+                app:layout_constraintTop_toTopOf="@+id/compareCountryHolder"
+                app:layout_constraintVertical_bias="0.511" />
+
+            <TextView
+                android:id="@+id/contryView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="67dp"
+                android:fontFamily="@font/baloo_regular"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="View by Country"
+                android:textColor="@color/grayish_text"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/viewByContryHolder"
+                app:layout_constraintEnd_toEndOf="@+id/viewByContryHolder"
+                app:layout_constraintStart_toStartOf="@+id/viewByContryHolder"
+                app:layout_constraintTop_toTopOf="@+id/viewByContryHolder"
+                app:layout_constraintVertical_bias="1.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

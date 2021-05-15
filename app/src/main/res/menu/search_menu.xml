@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/action_search"
+            android:icon="@drawable/search_icon"
+            app:showAsAction="always|collapseActionView"
+            app:actionViewClass="androidx.appcompat.widget.SearchView"
+            android:title="Search Country Stats"/>
+        <item
+            android:id="@+id/refreshSecondary"
+            android:icon="@drawable/refresh_icon"
+            android:title="Refresh Page"
+            app:showAsAction="always" />
+        <item
+            android:id="@+id/faqSecondary"
+            android:icon="@drawable/question_icon"
+            android:title="FAQ"
+            app:showAsAction="never"
+            />
+        <item
+            android:id="@+id/aboutAppSecondary"
+            android:icon="@drawable/info_icon"
+            android:title="About"
+            app:showAsAction="never"
+            />
+    </group>
+</menu>

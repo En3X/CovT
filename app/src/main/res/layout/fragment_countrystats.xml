@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_bg"
+    tools:context=".countrystats"
+
+    >
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/countryStatsIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:fontFamily="@font/baloo_regular"
+                android:text="Stats for Country"
+                android:textColor="@color/grayish_text"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.004"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.116" />
+
+            <ImageView
+                android:id="@+id/countryTotalConfirmed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/countryStatsIndicator"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/holder_rectangle" />
+
+            <TextView
+                android:id="@+id/countryConfirmed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="58dp"
+                android:fontFamily="@font/baloo_regular"
+                android:text="@string/confirmed"
+                android:textColor="@color/grayish_text"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@+id/countryTotalConfirmed"
+                app:layout_constraintEnd_toEndOf="@+id/countryTotalConfirmed"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/countryTotalConfirmed"
+                app:layout_constraintTop_toTopOf="@+id/countryTotalConfirmed"
+                app:layout_constraintVertical_bias="0.538" />
+
+            <TextView
+                android:id="@+id/countryConfirmedNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_marginStart="59dp"
+                android:layout_marginEnd="64dp"
+                android:layout_marginBottom="31dp"
+                android:fontFamily="@font/baloo_regular"
+                android:text="@string/loadingDots"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="@+id/countryTotalConfirmed"
+                app:layout_constraintEnd_toEndOf="@+id/countryTotalConfirmed"
+                app:layout_constraintHorizontal_bias="0.476"
+                app:layout_constraintStart_toStartOf="@+id/countryTotalConfirmed"
+                app:layout_constraintTop_toBottomOf="@+id/countryConfirmed"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/countryTotalDeath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.051"
+                app:layout_constraintStart_toEndOf="@+id/countryTotalConfirmed"
+                app:layout_constraintTop_toBottomOf="@+id/countryStatsIndicator"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/holder_rectangle" />
+
+            <TextView
+                android:id="@+id/countryDeath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/baloo_regular"
+                android:text="@string/death"
+                android:textColor="@color/grayish_text"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@+id/countryTotalDeath"
+                app:layout_constraintEnd_toEndOf="@+id/countryTotalDeath"
+                app:layout_constraintHorizontal_bias="0.246"
+                app:layout_constraintStart_toStartOf="@+id/countryTotalDeath"
+                app:layout_constraintTop_toTopOf="@+id/countryTotalDeath"
+                app:layout_constraintVertical_bias="0.272" />
+
+            <TextView
+                android:id="@+id/countryDeathNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo_regular"
+                android:text="@string/loadingDots"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="@+id/countryTotalDeath"
+                app:layout_constraintEnd_toEndOf="@+id/countryTotalDeath"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="@+id/countryTotalDeath"
+                app:layout_constraintTop_toBottomOf="@+id/countryDeath"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!-- Row 2 -->
+            <ImageView
+                android:id="@+id/countryTotalConfirmed3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="17dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.004"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/countryTotalConfirmed"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/holder_rectangle" />
+
+            <TextView
+                android:id="@+id/countryRecoveredNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo_regular"
+                android:text="@string/loadingDots"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="@+id/countryTotalConfirmed3"
+                app:layout_constraintEnd_toEndOf="@+id/countryTotalConfirmed3"
+                app:layout_constraintHorizontal_bias="0.471"
+                app:layout_constraintStart_toStartOf="@+id/countryTotalConfirmed3"
+                app:layout_constraintTop_toBottomOf="@+id/countryRecovered"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/countryRecovered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/baloo_regular"
+                android:text="@string/recovered"
+                android:textColor="@color/grayish_text"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@+id/countryTotalConfirmed3"
+                app:layout_constraintEnd_toEndOf="@+id/countryTotalConfirmed3"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/countryTotalConfirmed3"
+                app:layout_constraintTop_toTopOf="@+id/countryTotalConfirmed3"
+                app:layout_constraintVertical_bias="0.154" />
+
+            <ImageView
+                android:id="@+id/countryTotalDeath2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="17dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/countryTotalConfirmed3"
+                app:layout_constraintTop_toBottomOf="@+id/countryTotalDeath"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/holder_rectangle" />
+
+            <TextView
+                android:id="@+id/countryActive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="47dp"
+                android:fontFamily="@font/baloo_regular"
+                android:text="@string/active"
+                android:textColor="@color/grayish_text"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@+id/countryTotalDeath2"
+                app:layout_constraintEnd_toEndOf="@+id/countryTotalDeath2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/countryTotalDeath2"
+                app:layout_constraintTop_toTopOf="@+id/countryTotalDeath2"
+                app:layout_constraintVertical_bias="0.172" />
+
+            <TextView
+                android:id="@+id/countryActiveNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="43dp"
+                android:fontFamily="@font/baloo_regular"
+                android:text="@string/loadingDots"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="@+id/countryTotalDeath2"
+                app:layout_constraintEnd_toEndOf="@+id/countryTotalDeath2"
+                app:layout_constraintHorizontal_bias="0.511"
+                app:layout_constraintStart_toStartOf="@+id/countryTotalDeath2"
+                app:layout_constraintTop_toBottomOf="@+id/countryActive"
+                app:layout_constraintVertical_bias="0.09" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

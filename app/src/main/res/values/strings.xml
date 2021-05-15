@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CovT</string>
+    <string name="worldStatIndicator">Total World Stats</string>
+    <string name="confirmed">Confirmed</string>
+    <string name="death">Death</string>
+    <string name="loadingDots">0</string>
+    <string name="active">Active</string>
+    <string name="recovered">Recovered</string>
+    <string name="activities">Activities</string>
+</resources>
